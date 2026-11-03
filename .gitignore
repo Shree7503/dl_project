@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Dataset (~240 MB, download instructions in README)
+data/
+
+# Trained model (~31 MB, rebuild with: python train.py)
+models/*.keras
+
+# macOS
+.DS_Store
+
+# Editor / tool settings
+.vscode/
+.idea/
+.claude/
+
+# Streamlit secrets
+.streamlit/secrets.toml

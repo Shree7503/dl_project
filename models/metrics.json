@@ -1,0 +1,6 @@
+{
+  "test_accuracy": 0.7943,
+  "manual_test_accuracy": 0.8078,
+  "train_samples": 160000,
+  "epochs_trained": 2
+}
