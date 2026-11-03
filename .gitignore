@@ -11,9 +11,6 @@ env/
 # Dataset (~240 MB, download instructions in README)
 data/
 
-# Trained model (~31 MB, rebuild with: python train.py)
-models/*.keras
-
 # macOS
 .DS_Store
 

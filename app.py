@@ -11,9 +11,10 @@ import tensorflow as tf
 
 from utils import clean_text
 
-MODEL_PATH = os.path.join("models", "sentiment_model.keras")
-METRICS_PATH = os.path.join("models", "metrics.json")
-HISTORY_PNG = os.path.join("models", "training_history.png")
+MODELS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "models")
+MODEL_PATH = os.path.join(MODELS_DIR, "sentiment_model.keras")
+METRICS_PATH = os.path.join(MODELS_DIR, "metrics.json")
+HISTORY_PNG = os.path.join(MODELS_DIR, "training_history.png")
 MAX_TOKENS = 50  # must match MAX_LEN in train.py
 
 POS_COLOR = "#16a34a"

@@ -36,9 +36,17 @@ pip install -r requirements.txt
 curl -L -o data/s140.zip https://cs.stanford.edu/people/alecmgo/trainingandtestdata.zip
 unzip data/s140.zip -d data && rm data/s140.zip
 
-python train.py            # creates models/sentiment_model.keras (~5 min on a laptop CPU)
+python train.py            # optional: the trained model is already in models/
 streamlit run app.py
 ```
+
+## Deploy on Streamlit Community Cloud
+1. Go to https://share.streamlit.io and sign in with GitHub.
+2. Click **Create app** and choose this repository, branch `main`, main file `app.py`.
+3. Under **Advanced settings**, choose Python **3.12**, then deploy.
+
+The trained model (`models/sentiment_model.keras`, ~11 MB) is committed, so the app runs without
+the dataset or retraining.
 
 ## Web app features
 - **Analyze a tweet** — type text, get Positive/Negative with confidence

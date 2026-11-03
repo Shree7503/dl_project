@@ -127,7 +127,8 @@ def main():
     manual_acc = float((manual_preds == manual["label"].to_numpy()).mean())
     print(f"Accuracy on hand-labelled test set ({len(manual)} tweets): {manual_acc:.4f}")
 
-    model.save(os.path.join(MODEL_DIR, "sentiment_model.keras"))
+    # Save an uncompiled copy: dropping the optimizer state cuts the file from ~32 MB to ~11 MB
+    tf.keras.Model(model.inputs, model.outputs).save(os.path.join(MODEL_DIR, "sentiment_model.keras"))
     metrics = {
         "test_accuracy": round(test_acc, 4),
         "manual_test_accuracy": round(manual_acc, 4),

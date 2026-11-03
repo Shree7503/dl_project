@@ -1,5 +1,7 @@
-tensorflow>=2.16
+# Pinned to the versions the saved model was trained with
+tensorflow==2.21.0
+keras==3.15.1
+streamlit==1.66.1
 pandas
 scikit-learn
 matplotlib
-streamlit
