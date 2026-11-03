@@ -21,3 +21,6 @@ data/
 
 # Streamlit secrets
 .streamlit/secrets.toml
+
+# Local agent skill links (point into .venv)
+.agents/
